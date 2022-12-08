@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
         viewModel.dogLiveData.observe(this) { dogImage ->
             dogImage?.let {
                 Log.d("DOG_SERVICE_RESPONSE", "Dog Service Messages -> ${it.message}")
+                Log.d("DOG_SERVICE_RESPONSE","Dog Service Status -> ${it.status}")
             } ?: kotlin.run {
                 Log.d("DOG_SERVICE_RESPONSE", "error")
             }
